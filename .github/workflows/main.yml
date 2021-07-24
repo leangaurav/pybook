@@ -43,4 +43,4 @@ jobs:
         git add docs
         git status
         git commit -m "Update site content"
-        git push origin gh-pages
+        git push -f origin gh-pages
