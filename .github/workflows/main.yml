@@ -28,7 +28,9 @@ jobs:
     # Build the book
     - name: Build and copy contents
       run: |
-        jupyter-book build . && mkdir docs && mv _build/html docs && cp -r docs_static/* docs/
+        jupyter-book build .
+        mv _build/html docs
+        cp -r docs_static/* docs/
 
     - name: List contents
       run: |
@@ -36,4 +38,9 @@ jobs:
 
     - name: Update the site
       run: |
-        git add docs && git commit -m "Update site content" && git push -f
+        git config user.name "Git Runner"
+        git config user.email "35618518+leangaurav@users.noreply.github.com"
+        git add docs
+        git status
+        git commit -m "Update site content"
+        git push
