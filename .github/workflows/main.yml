@@ -30,7 +30,7 @@ jobs:
       run: |
         jupyter-book build .
         mv _build/html docs
-        cp -r docs_static/* docs/
+        cp -a docs_static/. docs/
 
     - name: List contents
       run: |
