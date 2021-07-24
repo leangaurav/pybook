@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: View python version
+    - run: |
+        python --version
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Delete gh-pages branch
+      run: |
+        git branch -d gh-pages || true
+
+    - name: Create gh-pages branch
+      run: |
+        git branch gh-pages && git switch gh-pages
+
+    # Build the book
+    - name: Build and copy contents
+      run: |
+        jupyter-book build . && mkdir docs && mv _build/html docs && cp -r docs_static/* docs/
+
+    - name: List contents
+      run: |
+        ls -la docs/
+
+    - name: Update the site
+      run: |
+        git add docs && git commit -m "Update site content" && git push -f
