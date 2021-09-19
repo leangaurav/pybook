@@ -3,7 +3,7 @@
 
 title: Pybook
 author: leangaurav
-logo: logo.png
+logo: Logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -29,6 +29,8 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  baseurl: https://pybook.leangaurav.dev
+  favicon: LogoSquare.png
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"

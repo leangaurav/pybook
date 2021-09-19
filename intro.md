@@ -1,6 +1,6 @@
-# Pybook: Industrial Python
+# Industrial Python: The Book
 
-Python is just another dynamically typed, interpreted, high level programming language. Learning python is one thing and building software applications is another. Python may be easy for some and tough for some, but building applications that work in production environment requires more that just knowing the language. It's a combination of code, design, computer science principles, a variety of other tools and much more.
+Python is just another dynamically typed, interpreted, high level programming language. Python is quite fun to learn and use at work. But learning a programming language is one thing and building software applications is another. Python may be easy for some and tough for some, but building applications that work in production environment requires more that just knowing the language. It's a combination of code, design, computer science principles, a variety of other tools and much more.
 This book is an effort to bridge the gap between what's taught in programming courses vs what happens when one enters IT industry.
 We'll cover introduction to python, diving into language specifics and then jump to practical use cases for python. Wherever possible you will find examples and problems for you to solve by yourself.
 
